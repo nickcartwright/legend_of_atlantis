@@ -1,0 +1,64 @@
+54
+13 10
+5
+2 14 6 
+4
+14 2
+3 3 3
+12 1000
+6 0 1 3
+1
+Help me!
+6 1 1 1
+1
+Are you ok?
+6 0 1 3
+1
+Help me!
+12 1000
+2 14 5
+4
+3 3 3 
+12 1000
+2 15 5
+14 3 
+4
+3 3 3
+12 1000
+6 1 1 1
+1
+[You blow out the candles]
+12 1000
+8 16 5 13 8
+4 
+3 3 3
+12 1000
+14 2
+4
+3 3 3
+12 1000
+1
+[Huff]
+12 1000
+8 15 4 13 8
+4
+3 3 3
+12 1000
+14 3
+4
+3 3 3
+12 1000
+6 0 1 3
+1
+You must help me escape
+1
+The Priest, he is one of them.
+6 1 1 1
+1
+One of who?
+6 0 1 3
+1
+The monstors who came from the black cloud....
+1
+We are all doomed......
+24 0 11 2

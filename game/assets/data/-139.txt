@@ -1,0 +1,10 @@
+5
+17
+1
+The sign has directions;
+1
+Ahead - The Castle
+1
+Left - Hotel Atlantis
+1
+Right - Temple of the graves

@@ -1,8 +1,7 @@
 """Story script interpreter for Legend of Atlantis - all 29 command types."""
 
-import os
 import pygame
-from game.constants import DATA_DIR, GLOBAL_MAX, ASSET_DIR
+from game.constants import GLOBAL_MAX
 from game.data_loader import open_story_file
 
 
@@ -314,9 +313,7 @@ def _execute_command(cmd, reader, game):
 
         # Play part.mid if available
         old_music = audio.music_filename
-        part_mid = os.path.join(ASSET_DIR, "part.mid")
-        if os.path.exists(part_mid):
-            audio.play_music("part.mid")
+        audio.play_music("part.mid")
 
         ui.draw_party_scene(text1, text2, text3, screen)
         _delay_with_events(10000)

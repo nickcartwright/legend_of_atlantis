@@ -1,0 +1,19 @@
+11
+6 0 4 4
+1
+Shouldn't you be out at the dock?
+6 1 1 1
+1
+Well, I'm going to be going on a... well... holiday,
+1
+er, I'm not going to be here for a while.
+6 0 4 4
+1
+How long shall you be gone for?
+6 1 1 1
+1
+I can't be sure. I am going to Atlantis.
+6 0 4 4
+1
+Have a good time. I guess I'll have to find a replacement at the dock [chuckle]
+ 

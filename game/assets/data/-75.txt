@@ -1,0 +1,8 @@
+5
+6 1 1 1
+1
+Can you tell me the password to get into the castle?
+6 0 4 4
+1
+Password? There is no password. Tell that to the guard!
+24 1 1 4

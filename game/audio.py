@@ -2,7 +2,9 @@
 
 import os
 import pygame
-from game.constants import ASSET_DIR
+from game.constants import SOUND_DIR
+
+MUSIC_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'assets', 'music')
 
 
 class Audio:
@@ -14,6 +16,7 @@ class Audio:
         self._sound_move = None
         self._sound_stairs = None
         self._initialized = False
+        self._key_lookup = {}  # maps key (lowercase) -> actual filename from music.ini
 
     def init(self):
         """Initialize the audio system."""
@@ -26,12 +29,12 @@ class Audio:
 
         # Try to load sound effects
         if self._initialized:
-            w1_path = os.path.join(ASSET_DIR, "w1.WAV")
+            w1_path = os.path.join(SOUND_DIR, "w1.WAV")
             if not os.path.exists(w1_path):
-                w1_path = os.path.join(ASSET_DIR, "w1.wav")
-            w2_path = os.path.join(ASSET_DIR, "w2.wav")
+                w1_path = os.path.join(SOUND_DIR, "w1.wav")
+            w2_path = os.path.join(SOUND_DIR, "w2.wav")
             if not os.path.exists(w2_path):
-                w2_path = os.path.join(ASSET_DIR, "w2.WAV")
+                w2_path = os.path.join(SOUND_DIR, "w2.WAV")
 
             try:
                 if os.path.exists(w1_path):
@@ -47,28 +50,35 @@ class Audio:
             except pygame.error:
                 pass
 
+    def set_music_data(self, music_data):
+        """Store the key lookup from music.ini so all references resolve through it."""
+        self._key_lookup = music_data.get('_key_lookup', {})
+
     def play_music(self, filename):
         """
-        Play a music file. Supports MIDI (.mid) and OGG (.ogg).
-        filename can be just the name (e.g., 'movement2.mid') or a full path.
+        Play a music file. Resolves through music.ini key lookup first,
+        so swapping tracks only requires changing music.ini.
         """
         if not self._initialized:
             return
 
-        # Build the full path
-        if os.path.isabs(filename):
-            path = filename
-        else:
-            path = os.path.join(ASSET_DIR, filename)
+        # Resolve through music.ini: if filename matches a Key, use the configured Name
+        basename = os.path.basename(filename)
+        resolved = self._key_lookup.get(basename.lower(), basename)
+        path = os.path.join(MUSIC_DIR, resolved)
 
         if not os.path.exists(path):
-            # Try .ogg version in game/assets/music/ directory
-            ogg_name = os.path.splitext(os.path.basename(filename))[0] + '.ogg'
-            ogg_path = os.path.join(os.path.dirname(ASSET_DIR), 'game', 'assets', 'music', ogg_name)
-            if os.path.exists(ogg_path):
-                path = ogg_path
-            else:
-                return
+            # Try case-insensitive match in midi dir
+            try:
+                for f in os.listdir(MUSIC_DIR):
+                    if f.lower() == resolved.lower():
+                        path = os.path.join(MUSIC_DIR, f)
+                        break
+            except OSError:
+                pass
+
+        if not os.path.exists(path):
+            return
 
         try:
             if self.current_music == path and self.music_playing:

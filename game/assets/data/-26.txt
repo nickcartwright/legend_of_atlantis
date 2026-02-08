@@ -1,0 +1,12 @@
+7
+6 0 3 5 
+1
+Hello ZZ.
+1
+Rumour has it you are not going to be staying with us for much longer.
+6 1 1 1
+1
+Yes, I have been chosen to lead a force into Atlantis.
+6 0 3 5
+1
+Good luck, we are going to miss you here...

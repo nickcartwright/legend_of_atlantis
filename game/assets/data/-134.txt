@@ -1,0 +1,9 @@
+6
+17
+26 15
+1
+inside the door and it unlocks!
+24 1 3 4
+1
+You leave the lott key inside the door.
+10 3 21 -9

@@ -1,0 +1,13 @@
+10
+2 15 23
+4
+3 3 4
+6 0 4 4
+12 2000
+1
+The resident Alcamist, Employee of the King.
+1
+Bring me some stone!
+2 15 24
+4
+3 3 3

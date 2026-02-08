@@ -1,0 +1,150 @@
+150
+13 17
+5
+2 3 24
+14 1
+4
+12 1000
+1
+As with every end - there is a beginning...
+1
+With every truth - there is a lie....
+3 3 5
+1
+Atlantis was once a peaceful place...
+12 500
+1
+... ruled by a group of priests - magicians and alcamists, called the Elite.
+1
+An advanced civilization. They believed the gods kept the lands fruitfull as it floated over the seas of Nune.
+12 1000
+4
+3 3 5
+12 1000
+4
+3 3 4
+12 1000
+3 3 3 
+12 1000
+1
+Since the creation of time, a power grew under Atlantis - A power to be guarded.
+1
+The Position of Atlantis in the universe rendered it ideal for storage of such a power.
+12 1000
+2 3 24
+4
+3 3 3
+12 1000
+1
+The Elite knew of this power...
+1
+...greedy as they were they created an orb to contain the power and fed upon it growing stronger.
+12 1000
+2 3 23
+4
+3 3 3
+12 1000
+2 3 22
+4
+3 3 3
+12 1000
+1
+The gods, angered by this sealed the power from all. Only two things able to break the seal...
+1
+...the Transcendedt force of good...
+1
+...or the daemonic force of evil!
+12 1000
+2 3 21
+4
+3 3 3
+12 1000
+2 3 20
+8 1 21 8 2
+8 1 20 8 1
+8 5 21 9 2
+8 5 20 9 1
+4
+3 3 3
+12 1000
+1
+Generations passed. The past forgotton by most, and the gates still sealed - the power was forgotton.
+12 1000
+2 3 19
+4
+3 3 3
+12 1000
+2 3 18
+8 1 18 8 2
+8 1 17 8 1
+8 5 18 9 2
+8 5 17 9 1
+4
+3 3 3
+12 1000
+1
+A black cloud shadowed the land of Atlantis...
+1
+...Hords of evil monstors landed in search for the power that lay beneath.
+1
+Commanded by an unknown entity of daemonic terror if the seal were broken
+1
+Atlantis and the rest of the universe would live forever in terror.
+12 1000
+2 3 17
+4
+3 3 3
+12 1000
+1
+Atlantis was thrown into war with the monstors.
+1
+Most towns destroyed, only a few strongholds surviving.
+2 3 16
+4
+3 3 3
+12 1000
+2 3 15
+4
+3 3 3
+12 1000
+2 3 14
+4
+3 3 3
+1
+In the midst of war the King of Atlantis had a vision, brought to him by the gods.
+1
+A vision of a boy and the symbol of the eye - who would save Atlanits....
+12 1000
+2 3 13
+8 1 14 8 2
+8 1 13 8 1
+8 5 14 9 2
+8 5 13 9 1
+4
+3 3 3
+12 1000
+1
+A messanger, 3 years ago named KORAL was sent out to find that boy....
+12 1000
+2 3 12
+4
+3 3 3
+12 1000
+1
+The gate - still sealed, waiting to be opened.......
+12 1000
+11 1
+12 100
+14 2
+4
+3 3 3
+12 3000
+19
+13 2
+5
+2 3 4
+20
+4
+3 3 3
+1
+Suddleny ZZ awoke to a faint noise in the distance.

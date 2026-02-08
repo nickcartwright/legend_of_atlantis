@@ -1,0 +1,43 @@
+40
+2 11 7
+4
+3 3 4
+12 1000
+2 11 6
+4
+3 3 5
+12 1000
+2 11 5
+4
+3 3 5
+12 1000
+6 0 2 3 
+1
+We meet again ZZ....
+1
+I always keep my promises.
+6 0 1 1
+1
+ ZZ, he has you trapped!
+12 1000
+6 1 1 1 
+1
+Where is the King ?
+6 0 2 3 
+1
+He is safe.
+12 500
+1
+Although, I am more worried about you.
+1
+I have been given the news something big is happening in the mountians.
+1
+I don't want to miss out.
+12 1000
+1
+Guards - Crush ZZ and his men.
+1
+Farewell........
+13 15
+17
+5

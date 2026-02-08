@@ -1,0 +1,17 @@
+14
+17
+1
+[You knock the door politely]
+6 0 3 2
+1
+Come in stranger [Echo]
+12 500
+2 8 12
+4
+12 1000
+2 8 11
+4
+12 1000
+2 8 10
+4
+3 3 3

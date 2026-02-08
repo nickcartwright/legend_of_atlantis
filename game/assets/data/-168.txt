@@ -1,0 +1,6 @@
+3
+6 0 3 2
+1
+Watch out !
+1
+This baloon can not get high enough to fly through the mountians.

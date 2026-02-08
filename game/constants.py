@@ -4,9 +4,11 @@ import os
 from enum import Enum, auto
 
 # Paths
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA_DIR = os.path.join(PROJECT_ROOT, "original_code", "Data")
-ASSET_DIR = os.path.join(PROJECT_ROOT, "original_code")
+GAME_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(GAME_DIR)
+DATA_DIR = os.path.join(GAME_DIR, "assets", "data")
+ASSET_DIR = os.path.join(GAME_DIR, "assets", "images")
+SOUND_DIR = os.path.join(GAME_DIR, "assets", "sounds")
 
 # Tile dimensions (source BMP)
 TILE_W = 28

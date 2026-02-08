@@ -1,0 +1,30 @@
+21
+6 0 3 3
+1
+Have you found my poor child [Sob]
+6 1 1 1
+1
+I think I might have, is this him ?
+17
+1
+[The poor woman spun round - grabbing the child out your hands]
+9 12 22 5 1
+4
+3 3 3
+12 1000
+6 0 1 5
+1
+Thankyou, oh - how can I ever re-pay you......
+6 1 1 1 
+1
+It is OK, you need all you your strength.
+6 0 1 5
+1
+No, I know. I have the key to a small lott on the far side of town, go there and take what you need.
+1
+Please.
+6 1 1 1
+1
+Ok, Thankyou and farewell.
+25 15
+24 1 3 3

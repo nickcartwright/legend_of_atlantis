@@ -1,10 +1,10 @@
 """Save and load game state for Legend of Atlantis."""
 
 import os
-from game.constants import GLOBAL_MAX, MAX_ITEMS_PER_CHAR, ASSET_DIR
+from game.constants import GLOBAL_MAX, MAX_ITEMS_PER_CHAR
 
-
-SAVE_DIR = os.path.join(ASSET_DIR, "Save")
+GAME_DIR = os.path.dirname(os.path.abspath(__file__))
+SAVE_DIR = os.path.join(GAME_DIR, "assets", "saves")
 
 
 def ensure_save_dir():

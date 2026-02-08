@@ -1,0 +1,27 @@
+20
+2 15 23
+4
+3 3 4
+6 0 4 4
+12 2000
+1
+Hello, I am the resident Alcamist, Employee of the King, how can I help you?
+6 1 1 1
+1
+Do you turn stone into Gold?
+6 0 4 4
+1 
+Yes, if you have the correct kind of stone I can make almost anything.
+6 1 1 1
+1
+This is what I have....
+17
+1
+[You show him all the stone you posess]
+6 0 4 4
+1
+Not of any use. Come back if you find anything special.
+24 1 9 1
+2 15 24
+4
+3 3 3

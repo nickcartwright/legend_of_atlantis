@@ -70,6 +70,7 @@ class Game:
         self.char_data = data_loader.load_characters()
         self.enemy_data = data_loader.load_enemies()
         self.music_data = data_loader.load_music_ini()
+        self.audio.set_music_data(self.music_data)
         self.gaze_data = data_loader.load_gaze_ini()
 
     def load_location(self, loc_number):

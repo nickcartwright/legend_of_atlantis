@@ -1,0 +1,99 @@
+86
+13 14
+5
+2 3 4
+4
+14 3
+3 3 3
+6 0 5 2
+1 
+You may have escaped now, but I will return!
+12 1000
+1
+Ha ha ha ha har
+12 1000
+9 4 4 0 0 
+4
+3 3 3
+17
+1
+And so the Red Priest vanished into the unknown above
+1
+A red aura danced in the shadows....
+12 2000
+13 9
+5
+2 34 15
+9 34 17 0 0
+9 33 17 4 3
+10 34 17 -108
+9 35 12 0 0 
+10 33 11 0
+10 35 12 0
+4
+3 3 1
+12 1500
+9 34 13 3 1
+4
+3 3 2
+12 1500
+9 34 13 0 0
+9 34 14 3 1
+4 
+3 3 3
+12 1500
+9 34 14 0 0
+9 34 15 3 1
+2 34 16
+4
+12 1500
+9 34 15 0 0
+2 34 17
+4
+3 3 3
+12 1500
+2 34 18
+4
+3 3 3
+12 1500
+9 34 17 3 1
+9 33 17 3 6
+14 2
+4
+3 3 3
+12 1500
+6 0 3 4
+1 
+You are safe CHIFOL!
+1
+Oh, and you are so brave!
+1
+I heard fighting inside, what happened?
+9 34 17 4 6
+4
+3 3 3
+12 1500
+6 0 6 4
+1
+Well,
+1
+err,
+1
+It was ZZ here who rescued me [Mumble]
+1
+The Red Priest, he was so strong.
+1
+I must thank ZZ.
+9 34 17 3 1
+9 33 17 4 3
+4
+3 3 3
+12 1500
+6 1 1 1
+1
+It is OK. I have a feeling he was waiting for me.
+1
+The priest has gone but I have the feeling he will return.
+1
+Something is happening here, something big and I must find out. 
+24 0 7 2

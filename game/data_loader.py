@@ -105,15 +105,24 @@ def load_enemies():
 
 
 def load_music_ini():
-    """Load music.ini -> dict of {music_id: {name, credit}}."""
+    """
+    Load music.ini -> dict of {music_id: {name, key, credit}}.
+    Also builds a key_lookup: {key_lower: name} for resolving filenames.
+    """
     config = load_ini("music.ini")
     music = {}
+    key_lookup = {}
     for section in config.sections():
         music_id = int(section)
+        name = config.get(section, 'Name', fallback='')
+        key = config.get(section, 'Key', fallback=name)
         music[music_id] = {
-            'name': config.get(section, 'Name', fallback=''),
+            'name': name,
+            'key': key,
             'credit': config.get(section, 'L1', fallback=''),
         }
+        key_lookup[key.lower()] = name
+    music['_key_lookup'] = key_lookup
     return music
 
 

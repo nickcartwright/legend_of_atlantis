@@ -1,0 +1,16 @@
+11
+6 0 1 1
+1
+I must go and see the King, you can explore, get to know the place for a while.
+1
+I shall meet you at the Kings chambers.
+1
+If you get lost I am sure the towns' people will assist you.
+6 1 1 1
+1
+Ok. See you soon.
+12 750
+9 27 30 0 0
+10 27 30 1
+4
+3 3 3

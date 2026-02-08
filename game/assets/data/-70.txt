@@ -1,0 +1,14 @@
+9
+6 1 1 1
+1
+I need the password to get into the castle! Please could you help me?
+6 0 4 5
+1
+I am not sure, you need to ask an employee of the King, there must be one in the city.
+6 1 1 1
+1
+Thankyou. I will visit again. Thankyou for your help.
+6 0 4 5
+1
+Good luck my friend.
+24 1 1 3

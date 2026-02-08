@@ -1,0 +1,16 @@
+10
+6 1 1 1 
+1
+Mum, Dad, I have to tel you something!
+6 0 1 5
+1
+It is OK, ZZ. 
+6 0 2 5
+1
+A being floating from the floor came and told us of your quest.
+6 0 1 5
+1
+We are going to miss you. Take care!
+6 1 1 1
+1
+Why are goodbyes so hard [Sob]

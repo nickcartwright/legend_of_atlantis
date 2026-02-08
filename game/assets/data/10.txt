@@ -1,0 +1,13 @@
+9
+6 0 4 2
+1
+Mommy!
+6 1 1 1
+1
+Your mommy is looking for you.
+17
+1
+[You pick up the baby]
+24 1 3 2
+9 14 9 0 0
+10 14 9 1

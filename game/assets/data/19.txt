@@ -1,0 +1,17 @@
+12
+6 0 3 4
+1
+Please, you must help!
+1
+The Priest, he has gone mad!
+1
+My husband went inside the church and hasn't returned.
+1
+Please help !!
+24 0 7 1
+9 34 17 0 0
+10 34 17 1
+9 33 17 4 3
+10 33 17 -108
+4 
+3 3 3

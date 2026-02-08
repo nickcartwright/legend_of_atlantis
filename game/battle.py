@@ -4,7 +4,7 @@ import random
 import os
 import pygame
 from game.constants import (
-    ASSET_DIR, TYPE_NAMES, DIR_SOUTH, DIR_NORTH, DIR_EAST, DIR_WEST,
+    TYPE_NAMES, DIR_SOUTH, DIR_NORTH, DIR_EAST, DIR_WEST,
 )
 from game.party import Enemy
 
@@ -249,9 +249,7 @@ class BattleSystem:
 
         # Play attack music
         old_music = self.game.audio.music_filename
-        attack_mid = os.path.join(ASSET_DIR, "attack.mid")
-        if os.path.exists(attack_mid):
-            self.game.audio.play_music("attack.mid")
+        self.game.audio.play_music("attack.mid")
 
         self._note(f"{member.name} {member.type_name} Attacks "
                   f"{enemy.name} {enemy.type_name}", att=5)
@@ -513,9 +511,7 @@ class BattleSystem:
 
         # Play attack music
         old_music = self.game.audio.music_filename
-        attack_mid = os.path.join(ASSET_DIR, "attack.mid")
-        if os.path.exists(attack_mid):
-            self.game.audio.play_music("attack.mid")
+        self.game.audio.play_music("attack.mid")
 
         self._note(f"{enemy.name} {enemy.type_name} Attacks "
                   f"{player.name} {player.type_name}", att=5)

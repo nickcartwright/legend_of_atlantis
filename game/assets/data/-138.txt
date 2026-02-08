@@ -1,0 +1,52 @@
+43
+2 13 24
+4
+3 3 4
+12 1000
+6 0 2 5
+1
+Welcome to the 'Hotel Atlantis'.
+1
+How many nights would you like to stay?
+6 1 1 1
+1
+I will stay one night, thankyou.
+6 0 2 5
+1
+Here is your key, sir.
+11 2
+12 2000
+17
+1
+[You fall asleep in one of the rooms]
+12 2000
+6 1 1 1
+1
+Zzzzz
+12 1000
+1
+Zzzzzzzzz
+12 1000
+1
+Zzzzz
+12 2000
+6 0 2 5
+1
+It's morning, Rise and shine!
+12 2000
+2 11 19
+20
+14 1
+4
+3 3 3
+12 1000
+2 11 20
+4
+3 3 3
+12 1000
+2 11 21
+4
+12 1000
+2 11 22 
+4
+3 3 3

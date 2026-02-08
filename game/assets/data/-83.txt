@@ -1,0 +1,17 @@
+11
+6 0 3 3
+1
+Please leave me alone [Sob]
+6 1 1 1
+1
+What is the matter?
+6 0 3 3 
+1
+I can't find my baby, he went missing [Sob]
+6 1 1 1
+1
+I will look for him for you.
+6 0 3 3
+1
+If you find him I will be forever greatfull.
+24 1 3 1

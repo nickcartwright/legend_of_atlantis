@@ -1,0 +1,10 @@
+6
+6 0 5 4
+1
+A wizard called Merlin wants to see you!
+6 1 1 1
+1
+But I must see the king!
+6 0 5 4
+1
+He sounded although it was important!

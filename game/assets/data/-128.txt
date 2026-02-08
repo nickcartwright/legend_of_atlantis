@@ -1,0 +1,29 @@
+18
+6 1 1 1
+1
+What are you doing down here ?
+6 0 5 5
+1
+Shhhhhhhhhh!
+6 1 1 1
+1
+[Wisper] Why?
+6 0 5 5
+1
+[Wisper] I am hiding.
+6 1 1 1
+1
+[Wisper] From what?
+6 0 5 5
+1
+[Wisper] The monstors. They are here, I saw them flying overhead.
+1
+They won't find me in here, I am safe.
+1
+And you can be too for a small fee?
+6 1 1 1
+1
+I wouldn't even consider hiding away from everything.
+6 0 5 5
+1
+Then would you kindly leave.
