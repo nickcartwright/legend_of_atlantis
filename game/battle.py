@@ -2,6 +2,7 @@
 
 import random
 import os
+from collections import deque
 import pygame
 from game.constants import (
     TYPE_NAMES, DIR_SOUTH, DIR_NORTH, DIR_EAST, DIR_WEST,
@@ -97,7 +98,10 @@ class BattleSystem:
 
     def _redraw(self):
         """Redraw the battle screen."""
-        self.game.renderer.draw_battle(self.game.world, self.game.party, self.enemies)
+        reachable, active_pos = self.get_reachable_tiles()
+        self.game.renderer.draw_battle(
+            self.game.world, self.game.party, self.enemies, reachable, active_pos
+        )
         self._draw_current_lifebar()
         self.game.screen.blit(self.game.renderer.viewport, self.game.viewport_rect.topleft)
         self.game.ui.draw_panel(self.game.party, self.game.world, self.game.items_data)
@@ -161,6 +165,83 @@ class BattleSystem:
         if member and self.game.world.battle:
             world.main_x = member.bat_x
             world.main_y = member.bat_y
+
+    def get_reachable_tiles(self):
+        """BFS flood-fill from active player's position up to move_left steps.
+
+        Returns (reachable_set, (active_x, active_y)) where reachable_set is a
+        set of (x, y) tuples the player can move to or attack.
+        Returns (set(), None) if no active player.
+        """
+        party = self.game.party
+        world = self.game.world
+
+        member = party.get(self.pmoving)
+        if not member or not member.alive:
+            return set(), None
+
+        start = (member.bat_x, member.bat_y)
+        active_pos = start
+        move_left = member.move_left
+
+        if move_left <= 0:
+            return set(), active_pos
+
+        # Collect friendly positions (excluding current player)
+        friendly_positions = set()
+        for i in range(1, party.number + 1):
+            if i == self.pmoving:
+                continue
+            other = party.get(i)
+            if other and other.alive:
+                friendly_positions.add((other.bat_x, other.bat_y))
+
+        # Collect enemy positions (attackable, so included in reachable)
+        enemy_positions = set()
+        for enemy in self.enemies:
+            if enemy.alive:
+                enemy_positions.add((enemy.bat_x, enemy.bat_y))
+
+        reachable = set()
+        # BFS: (x, y, steps_remaining)
+        visited = {start: move_left}
+        queue = deque([(start[0], start[1], move_left)])
+
+        while queue:
+            x, y, steps = queue.popleft()
+            for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                nx, ny = x + dx, y + dy
+                val = world.get_val(nx, ny)
+                if val == 0:
+                    continue  # blocked tile
+
+                pos = (nx, ny)
+
+                # Friendly units block movement
+                if pos in friendly_positions:
+                    continue
+
+                # Enemy tiles are reachable (attackable) but don't propagate through
+                if pos in enemy_positions:
+                    if pos not in reachable:
+                        reachable.add(pos)
+                    continue
+
+                # Normal walkable tile with no NPC
+                char_at = world.get_char(nx, ny)
+                if char_at != 0:
+                    continue  # NPC blocks
+
+                new_steps = steps - 1
+                if pos in visited and visited[pos] >= new_steps:
+                    continue  # already visited with equal or more steps
+
+                visited[pos] = new_steps
+                reachable.add(pos)
+                if new_steps > 0:
+                    queue.append((nx, ny, new_steps))
+
+        return reachable, active_pos
 
     def handle_move(self, direction):
         """Handle player movement in battle. Returns True if action was taken."""

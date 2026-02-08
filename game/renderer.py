@@ -22,6 +22,12 @@ class Renderer:
         self._loaded_good_id = -1
         self._loaded_char_id = -1
 
+        # Battle highlight overlays (semi-transparent)
+        self._highlight_move = pygame.Surface((DISPLAY_TILE_W, DISPLAY_TILE_H), pygame.SRCALPHA)
+        self._highlight_move.fill((0, 150, 255, 60))
+        self._highlight_active = pygame.Surface((DISPLAY_TILE_W, DISPLAY_TILE_H), pygame.SRCALPHA)
+        self._highlight_active.fill((255, 255, 0, 80))
+
     def load_tilesets(self, graph_id, good_id, char_id, asset_dir):
         """Load tileset BMPs by ID if not already loaded."""
         import os
@@ -162,7 +168,29 @@ class Renderer:
 
         self._draw_sprite(bmp, sprite_x, sprite_y, pos_x, pos_y)
 
-    def draw_battle(self, world, party, enemies):
+    def _draw_highlights(self, world, reachable_tiles, active_pos):
+        """Draw movement range (blue) and active character (yellow) highlights."""
+        main_x = world.main_x
+        main_y = world.main_y
+
+        for (x, y) in reachable_tiles:
+            vx = x - main_x + 3
+            vy = y - main_y + 3
+            if 1 <= vx <= VIEWPORT_TILES and 1 <= vy <= VIEWPORT_TILES:
+                px = (vx - 1) * DISPLAY_TILE_W
+                py = (vy - 1) * DISPLAY_TILE_H
+                self.viewport.blit(self._highlight_move, (px, py))
+
+        if active_pos:
+            ax, ay = active_pos
+            vx = ax - main_x + 3
+            vy = ay - main_y + 3
+            if 1 <= vx <= VIEWPORT_TILES and 1 <= vy <= VIEWPORT_TILES:
+                px = (vx - 1) * DISPLAY_TILE_W
+                py = (vy - 1) * DISPLAY_TILE_H
+                self.viewport.blit(self._highlight_active, (px, py))
+
+    def draw_battle(self, world, party, enemies, reachable_tiles=None, active_pos=None):
         """Draw the battle screen with all combatants."""
         # First clear enemy positions in char_array, then set living enemies
         for enemy in enemies:
@@ -176,6 +204,10 @@ class Renderer:
 
         # Draw the base board
         self.draw_board(world)
+
+        # Draw highlights (after board, before player sprites)
+        if reachable_tiles is not None:
+            self._draw_highlights(world, reachable_tiles, active_pos)
 
         # Draw player characters on top
         main_x = world.main_x

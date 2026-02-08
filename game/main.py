@@ -168,7 +168,10 @@ class Game:
 
         # Draw
         if self.world.battle:
-            self.renderer.draw_battle(self.world, self.party, self.enemies)
+            reachable, active_pos = self.battle_system.get_reachable_tiles()
+            self.renderer.draw_battle(
+                self.world, self.party, self.enemies, reachable, active_pos
+            )
             # Draw lifebar for current player
             member = self.party.get(self.pmoving)
             if member:
@@ -194,11 +197,11 @@ class Game:
         # Common keys
         if key == pygame.K_i:
             self.ui.draw_inventory(self.party, self.items_data, self.renderer)
-        elif key == pygame.K_s and pygame.key.get_mods() & pygame.KMOD_CTRL:
+        elif key == pygame.K_s:
             self._do_save()
         elif key == pygame.K_F5:
             self._do_save()
-        elif key == pygame.K_F9:
+        elif key == pygame.K_l or key == pygame.K_F9:
             self._do_load()
 
     def _handle_explore_key(self, key):
@@ -213,7 +216,7 @@ class Game:
             dy, direction = 1, DIR_SOUTH
         elif key == pygame.K_UP:
             dy, direction = -1, DIR_NORTH
-        elif key == pygame.K_l and not (pygame.key.get_mods() & pygame.KMOD_CTRL):
+        elif key == pygame.K_k:
             # Look command
             if self.world.description:
                 self.ui.show_note(self.world.description, self.speed)
@@ -221,7 +224,7 @@ class Game:
         elif key == pygame.K_h:
             # Help
             self.ui.show_note(
-                "Arrows: Move  I: Inventory  L: Look  S: Save  F9: Load  H: Help  ESC: Quit",
+                "Arrows: Move  I: Inventory  S: Save  L: Load  K: Look  H: Help  ESC: Quit",
                 self.speed
             )
             return
